@@ -11,11 +11,11 @@ class Pokemon
 
   def self.save(hp=60, name, type, db)
 #    if db.execute("COL_LENGTH('pokemon', 'hp') IS NOT NULL")
-    @sql_runner = SQLRunner.new(db)
-    @sql_runner.execute_create_hp_column
-    db.execute("INSERT INTO pokemon (hp, name, type) VALUES (?, ?, ?)", hp, name, type)
+#    @sql_runner = SQLRunner.new(db)
+#    @sql_runner.execute_create_hp_column
+#    db.execute("INSERT INTO pokemon (hp, name, type) VALUES (?, ?, ?)", hp, name, type)
 #    else
-#      db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", name, type)
+      db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", name, type)
 #    end
   end
 
