@@ -9,7 +9,7 @@ class Pokemon
     @hp = hp
   end
 
-  def self.save(hp=nil, name, type, db)
+  def self.save(hp=60, name, type, db)
 #    if db.execute("COL_LENGTH('pokemon', 'hp') IS NOT NULL")
       db.execute("INSERT INTO pokemon (hp, name, type) VALUES (?, ?, ?)", hp, name, type)
 #    else
