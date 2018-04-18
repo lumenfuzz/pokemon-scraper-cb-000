@@ -1,7 +1,7 @@
 class Pokemon
   attr_accessor :id, :name, :type, :db, :hp
 
-  def initialize(hp=60, id:, name:, type:, db:)
+  def initialize(hp=nil, id:, name:, type:, db:)
     @id = id
     @name = name
     @type = type
@@ -9,7 +9,7 @@ class Pokemon
     @hp = hp
   end
 
-  def self.save(hp=nil, name, type, db)
+  def self.save(hp=60, name, type, db)
     if hp == nil
       db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", name, type)
     else
