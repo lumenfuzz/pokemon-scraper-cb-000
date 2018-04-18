@@ -7,14 +7,13 @@ class Pokemon
     @type = type
     @db = db
     @hp = hp
-    puts "This is the hp: #{hp}"
   end
 
   def self.save(hp=nil, name, type, db)
 #    if db.execute("COL_LENGTH('pokemon', 'hp') IS NOT NULL")
-#      db.execute("INSERT INTO pokemon (hp, name, type) VALUES (?, ?, ?)", hp, name, type)
+      db.execute("INSERT INTO pokemon (hp, name, type) VALUES (?, ?, ?)", hp, name, type)
 #    else
-      db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", name, type)
+#      db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", name, type)
 #    end
   end
 
