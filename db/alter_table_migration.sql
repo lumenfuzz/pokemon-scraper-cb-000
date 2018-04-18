@@ -1,5 +1,1 @@
-IF COL_LENGTH('pokemon', 'hp') IS NULL
-BEGIN
-ALTER TABLE pokemon
-ADD hp INT
-END
+ALTER TABLE pokemon ADD COLUMN hp INTEGER;
