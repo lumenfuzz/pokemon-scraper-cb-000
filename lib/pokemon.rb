@@ -1,3 +1,4 @@
+require 'pry'
 class Pokemon
   attr_accessor :id, :name, :type, :db, :hp
 
@@ -15,6 +16,7 @@ class Pokemon
 #    @sql_runner.execute_create_hp_column
 #    db.execute("INSERT INTO pokemon (hp, name, type) VALUES (?, ?, ?)", hp, name, type)
 #    else
+    binding.pry
       db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", name, type)
 #    end
   end
