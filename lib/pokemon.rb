@@ -11,11 +11,11 @@ class Pokemon
   end
 
   def self.save(hp=nil, name, type, db)
-    if db.execute("COL_LENGTH('pokemon', 'hp') IS NOT NULL")
-      db.execute("INSERT INTO pokemon (hp, name, type) VALUES (?, ?, ?)", hp, name, type)
-    else
+#    if db.execute("COL_LENGTH('pokemon', 'hp') IS NOT NULL")
+#      db.execute("INSERT INTO pokemon (hp, name, type) VALUES (?, ?, ?)", hp, name, type)
+#    else
       db.execute("INSERT INTO pokemon (name, type) VALUES (?, ?)", name, type)
-    end
+#    end
   end
 
   def self.find(id, db)
