@@ -1,7 +1,7 @@
 class Pokemon
 
-  def initialize(id:, name:, type:, db:)
-    puts "#{id}"
+  def initialize(name:, type:, db:)
+    @name = name
   end
 
 end
